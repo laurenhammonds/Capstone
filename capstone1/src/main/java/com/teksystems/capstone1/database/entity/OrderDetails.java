@@ -19,7 +19,7 @@ package com.teksystems.capstone1.database.entity;
 //@NoArgsConstructor
 //@AllArgsConstructor
 //@Entity
-//@Table(name="OrderDetails")
+//@Table(name="order_details")
 public class OrderDetails {
 
 //	@Id
