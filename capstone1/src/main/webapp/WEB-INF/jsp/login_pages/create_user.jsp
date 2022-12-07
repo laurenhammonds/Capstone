@@ -1,7 +1,10 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <jsp:include page="../include/header.jsp" />
+<link rel="stylesheet" href="create_user.css">
 
+
+<div class="bg"></div>
 <div class="container">
 	<div class="row mt-3 mb-1">
 		<h2>Create User</h2>

@@ -14,5 +14,6 @@
 <!-- include global CSS files here -->
 
 <body>
+    <div class="bg"></div>
 
 <!-- site navigation bar on top of page -->
