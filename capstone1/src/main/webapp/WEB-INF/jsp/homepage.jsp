@@ -1,19 +1,24 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<link rel="stylesheet" href="../../pub/css/homepage.css">
+<jsp:include page="include/header.jsp" />
 
-<jsp:include page="../include/header.jsp" />
-
-<div>
-    <div class="navbar">
-        <div class="dropdown">
-          <button class="dropbutton">MENU
-          </button>
-          <div class="options">
-            <a href="#">SEARCH</a>
-            <a href="/SBAwebsite/products.html">PRODUCTS</a>
-          </div>
-        </div>
-          <a href="#"class="right">CART</a>
-          <a href="#" class="right">ACCOUNT</a>
-          <a href="#"class="right">FAVORITES</a>
-        </div>
+<div class="header">
+  <b>
+<h1>WILD CARD</h1>
+</b>
+<h3>JEWELRY, PRINTS, & MORE</h3>
 </div>
+
+  <div class="row">
+    <div class="main">
+      <div class="bg-image img1" style="height:300px;"></div>
+      <br>
+      <div class="bg-image img2" style="height:300px;"></div>
+      <br>
+      <div class="bg-image img3" style="height:300px;"></div>
+    </div>
+    </div>
+  
+
+ 
+
+<jsp:include page="include/footer.jsp" />

@@ -27,7 +27,8 @@ public class Order {
 //	@Column(name="id")
 //	private Integer id;
 //		
-//	@Column(name="quantity")
-//	private Integer quantity;
+//	@ManyToOne(fetch = FetchType.EAGER, optional = false)
+//	@JoinColumn(name="user_id", nullable = false)
+//	private User user;
 //		
 }

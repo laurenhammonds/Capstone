@@ -3,8 +3,6 @@
 <jsp:include page="../include/header.jsp" />
 <link rel="stylesheet" href="create_user.css">
 
-
-<div class="bg"></div>
 <div class="container">
 	<div class="row mt-3 mb-1">
 		<h2>Create User</h2>
@@ -13,7 +11,6 @@
     <c:if test="${bindingResult.hasErrors()}">
         <c:forEach items="${bindingResult.getAllErrors()}" var="error">
             <p style="color:rgb(255, 0, 0)">${error.getDefaultMessage()}</p>
-        
         </c:forEach>
     </c:if>
 
@@ -53,13 +50,13 @@
         <div class="mb-3">
             <label for="phone" class="form-label">Phone</label>
             <input type="text" value="${form.phone}" name="phone" class="form-control" id="phone" aria-describedby="phoneHelp">
-            <div id="phoneHelp" class="form-text">We will send you text messages even if you unsubscribe</div>
+            <div id="phoneHelp" class="form-text">Please input your phone number</div>
         </div>
 
         <div class="mb-3">
             <label for="address" class="form-label">Address</label>
             <input type="text" value="${form.address}" name="address" class="form-control" id="address" aria-describedby="addressHelp">
-            <div id="addressHelp" class="form-text">We want to send you physical advertisements every day</div>
+            <div id="addressHelp" class="form-text">Please provide your address</div>
         </div>
 
         <div class="row">

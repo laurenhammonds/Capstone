@@ -22,8 +22,8 @@ public class CreateUserForm {
 	private String email;
 	
 	@Pattern(regexp = "^[a-zA-Z0-9!@#]+$", message = "Password can only contain lowercase, uppercase, and special caracters")
+	@Length(max = 50, message = "Password must be shorter than 50 characters.")
 	@Length(min = 8, message = "Password must be longer than 8 characters.")
-	@Length(max = 25, message = "Password must be shorter than 25 characters.")
 	private String password;
 	
 	@NotEmpty(message = "Confirm password is required. ")

@@ -1,10 +1,15 @@
 package com.teksystems.capstone1.database.entity;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -30,9 +35,6 @@ public class User {
 	@Column(name="email")
 	private String email;
 	
-	@Column (name="username")
-	private String username;
-	
 	@Column(name="password")
 	private String password;
 	
@@ -56,6 +58,9 @@ public class User {
 	
 	@Column(name="zip")
 	private String zip;
+	
+//	@OneToMany(mappedBy = "order", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+//	private List<Order> order;
 
 
 }
