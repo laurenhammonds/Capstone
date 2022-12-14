@@ -42,14 +42,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	            // this URL is where spring security will send the user IF they have not requested a secure URL
 	            // if they have requested a secure URL spring security will ignore this and send them to the 
 	            // secured url they requested
-	            .defaultSuccessUrl("/")
+	            .defaultSuccessUrl("/homepage")
 	            .and()
 	        .logout()
 	            .invalidateHttpSession(true)
 	            // this is the URL to log a user out
 	            .logoutUrl("/user/logout")
 	            // this is the URL to send the browser to after the user has logged out
-	            .logoutSuccessUrl("/index");
+	            .logoutSuccessUrl("/");
 		
 
 	}

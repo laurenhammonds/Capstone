@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.teksystems.capstone1.database.dao.User1DAO;
+import com.teksystems.capstone1.database.dao.UserDAO;
 import com.teksystems.capstone1.database.dao.UserRoleDAO;
-import com.teksystems.capstone1.database.entity.User1;
+import com.teksystems.capstone1.database.entity.User;
 import com.teksystems.capstone1.database.entity.UserRole;
 import com.teksystems.capstone1.form.CreateUserForm;
 
@@ -25,7 +25,7 @@ import lombok.extern.slf4j.Slf4j;
 public class LoginController {
 	
 	@Autowired
-	private User1DAO userDao;
+	private UserDAO userDao;
 	
 	@Autowired
 	private UserRoleDAO userRoleDao;
@@ -70,7 +70,7 @@ public class LoginController {
 		}
 		
 		if ( !bindingResult.hasErrors()) {
-		User1 user = new User1();
+		User user = new User();
 		
 		user.setFirstName(form.getFirstName());
 		user.setLastName(form.getLastName());

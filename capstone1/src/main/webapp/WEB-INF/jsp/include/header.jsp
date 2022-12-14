@@ -26,7 +26,7 @@
 		  <ul class="navbar-nav">
 			<sec:authorize access="!isAuthenticated()">
 				<li class="nav-item">
-					<a class="nav-link" href="../homepage.jsp">HOME</a>
+					<a class="nav-link" href="/home">HOME</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">PRODUCTS</a>

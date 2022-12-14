@@ -22,7 +22,7 @@
 //@NoArgsConstructor
 //@AllArgsConstructor
 //@Entity
-//@Table(name="product")
+//@Table(name="Product")
 //public class Product {
 //
 //	@Id
@@ -50,7 +50,7 @@
 //	private String type;
 //	
 //	@ManyToOne(fetch = FetchType.EAGER, optional = false)
-//	@JoinColumn(name="order_details", nullable = false)
+//	@JoinColumn(name="Order_details", nullable = false)
 //	private OrderDetails orderDetails;
 //}
 //

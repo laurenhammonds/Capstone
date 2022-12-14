@@ -6,15 +6,12 @@ package com.teksystems.capstone1.database.entity;
 //import javax.persistence.FetchType;
 //import javax.persistence.OneToMany;
 
-//import java.util.Date;
 //import javax.persistence.Column;
 //import javax.persistence.Entity;
 //import javax.persistence.GeneratedValue;
 //import javax.persistence.GenerationType;
 //import javax.persistence.Id;
 //import javax.persistence.Table;
-//import javax.persistence.Temporal;
-//import javax.persistence.TemporalType;
 //
 //import lombok.AllArgsConstructor;
 //import lombok.Getter;
@@ -28,7 +25,7 @@ package com.teksystems.capstone1.database.entity;
 //@NoArgsConstructor
 //@AllArgsConstructor
 //@Entity
-//@Table(name="order_details")
+//@Table(name="Order_details")
 public class OrderDetails {
 
 //	@Id
@@ -36,11 +33,8 @@ public class OrderDetails {
 //	@Column(name="id")
 //	private Integer id;
 	
-//	@Column(name = "create_date", nullable = false, updatable = false)
-//	@Temporal(TemporalType.TIMESTAMP)
-//	private Date createDate;
 //	
-//	@OneToMany(mappedBy = "product", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+//	@OneToMany(mappedBy = "Product", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 //	private List<Product> product;
 
 }
