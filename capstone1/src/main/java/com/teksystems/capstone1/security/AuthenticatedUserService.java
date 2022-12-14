@@ -16,14 +16,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import com.teksystems.capstone1.database.dao.UserDAO;
-import com.teksystems.capstone1.database.entity.User;
+import com.teksystems.capstone1.database.dao.User1DAO;
+import com.teksystems.capstone1.database.entity.User1;
 
 @Service
 public class AuthenticatedUserService {
 
 	@Autowired
-	private UserDAO userDao;
+	private User1DAO userDao;
 
 	// added @Lazy to this to prevent a circular loading reference in component scan
 	// https://stackoverflow.com/questions/65807838/spring-authenticationmanager-and-circular-dependency
@@ -31,10 +31,6 @@ public class AuthenticatedUserService {
 	@Autowired
 	private AuthenticationManager authenticationManager;
 	
-	public User getCurrentUser() {
-		User user = userDao.findByEmail(getCurrentUsername());
-		return user;
-	}
 
 	public String getCurrentUsername() {
 		SecurityContext context = SecurityContextHolder.getContext();
@@ -45,9 +41,7 @@ public class AuthenticatedUserService {
 			return null;
 		}
 	}
-	
-	
-	
+
 
 	public boolean isUserInRole(String role) {
 		SecurityContext context = SecurityContextHolder.getContext();
@@ -61,6 +55,13 @@ public class AuthenticatedUserService {
 		}
 
 		return false;
+	}
+	
+	public User1 getCurrentUser() {
+		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
+		HttpSession session = attr.getRequest().getSession(true); // true == allow create
+		User1 user = (User1) session.getAttribute("user1");
+		return user;
 	}
 
 	public boolean isAuthenticated() {

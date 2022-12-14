@@ -14,9 +14,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
-import com.teksystems.capstone1.database.dao.UserDAO;
+import com.teksystems.capstone1.database.dao.User1DAO;
 import com.teksystems.capstone1.database.dao.UserRoleDAO;
-import com.teksystems.capstone1.database.entity.User;
+import com.teksystems.capstone1.database.entity.User1;
 import com.teksystems.capstone1.database.entity.UserRole;
 
 @Component
@@ -25,7 +25,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	public static final Logger LOG = LoggerFactory.getLogger(UserDetailsServiceImpl.class);
 
 	@Autowired
-	private UserDAO userDao;
+	private User1DAO userDao;
 
 	@Autowired
 	private UserRoleDAO userRoleDao;
@@ -35,7 +35,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		// this class is used by spring security to fetch the user from the database
 		// and create the user roles
 
-		User user = userDao.findByEmail(username);
+		User1 user = userDao.findByEmail(username);
 
 		if (user == null) {
 			throw new UsernameNotFoundException("Username '" + username + "' not found in database");
@@ -43,13 +43,14 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 		List<UserRole> userRoles = userRoleDao.findByUserId(user.getId());
 
-		// setup user roles
-		Collection<? extends GrantedAuthority> springRoles = buildGrantAuthorities(userRoles);
 
 		boolean accountIsEnabled = true;
 		boolean accountNonExpired = true;
 		boolean credentialsNonExpired = true;
 		boolean accountNonLocked = true;
+		
+		// setup user roles
+		Collection<? extends GrantedAuthority> springRoles = buildGrantAuthorities(userRoles);
 
 		return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(),
 				accountIsEnabled, accountNonExpired, credentialsNonExpired, accountNonLocked, springRoles);
