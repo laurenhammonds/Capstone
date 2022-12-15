@@ -1,4 +1,4 @@
-# Wild Card WebStore
+# Wild Card Case Study
 
 For my case study, I created a website for users to purchase handmade items! The user can create an account, log in to their account, view and search products, and view past orders. 
 
