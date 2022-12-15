@@ -36,7 +36,7 @@
     </div>
     <br><br><br><br>
     <div class="order_history">
-      <a class="nav-link" href="/orderhistory"><h3>Order History</h3><h5>Click here to see Order History</h5></a>
+      <a class="nav-link" href="./orderhistory"><h3>Order History</h3><h5>Click here to see Order History</h5></a>
     </div>
   </div>
 

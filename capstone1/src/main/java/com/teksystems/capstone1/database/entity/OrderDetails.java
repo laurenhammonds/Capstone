@@ -34,15 +34,19 @@ public class OrderDetails {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
 	private Integer id;
+
 	
     @ManyToOne
-    @JoinColumn(name = "id", insertable=false, updatable=false)
+    @JoinColumn(name = "order_id", insertable=false, updatable=false)
 	@EqualsAndHashCode.Exclude
 	@ToString.Exclude
     private Order order;
 
-	@OneToMany(mappedBy = "orderDetails")
-	@ToString.Exclude
-	private List<Product> products;
+	
+	@EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    @ManyToOne
+    @JoinColumn(name = "product_id", insertable= false, updatable=false)
+    private OrderDetails orderDetails;
 
 }

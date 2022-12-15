@@ -48,7 +48,13 @@
               <td width="30%"><img src="${product.productImage}" alt="${product.productName}" width="200px"/></td> 
               <td width="40%"><h3>${product.productName}</h3> <br> ${product.description}</td>
               <td width="10%">${product.price}</td>
-              <td width="20%"><button>Buy Item</button></td>
+              <td width="20%">
+                <form action="/addOrder" onSubmit="addOrder(event)">
+                <label for="productId">Product ID:</label><br>
+                <input type="text" name="" value="${product.id}"><br><br>
+                <button type="submit" class="btn btn-primary">Buy Now</button>
+              </form>
+            </td>
             </tr>
         </c:forEach>
     </table>

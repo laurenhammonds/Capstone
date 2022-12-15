@@ -14,4 +14,12 @@ public class HomeController {
 		response.setViewName("homepage");
 		return response;
 	}
+	
+
+	@RequestMapping(value = { "/contact" }, method = RequestMethod.GET)
+	public ModelAndView contact() {
+		ModelAndView response = new ModelAndView();
+		response.setViewName("contact");
+		return response;
+	}
 }

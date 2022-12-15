@@ -2,11 +2,15 @@ package com.teksystems.capstone1.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.teksystems.capstone1.database.dao.OrderDAO;
@@ -14,6 +18,7 @@ import com.teksystems.capstone1.database.dao.ProductDAO;
 import com.teksystems.capstone1.database.entity.Order;
 import com.teksystems.capstone1.database.entity.Product;
 import com.teksystems.capstone1.database.entity.User;
+import com.teksystems.capstone1.form.CreateUserForm;
 import com.teksystems.capstone1.security.AuthenticatedUserService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -32,7 +37,7 @@ public class OrdersController {
 	private AuthenticatedUserService authenticationService;
 	
 	
-//	@RequestMapping(value = {"/orders"}, method = RequestMethod.GET)
+//	@RequestMapping(value = {"/user/orderhistory"}, method = RequestMethod.GET)
 //	public ModelAndView viewOrders() { 
 //		ModelAndView response = new ModelAndView();
 //		response.setViewName("orderhistory");
@@ -47,19 +52,18 @@ public class OrdersController {
 //		return response;
 //		
 //	}
-//	
-//	
-//	@RequestMapping(value = { "/order/addOrder" }, method = RequestMethod.GET)
-//	public ModelAndView createOrder(@PathVariable Integer id) {
-//		
-//		ModelAndView response = new ModelAndView();
-//		response.setViewName("/cart");
-//		Product product = productDao.findById(id);
-//		
-//		response.addObject("product", product);
-//		response.addObject("order", orderDao.findByProductId(id));
-//		response.addObject("user", authenticationService.getCurrentUser());
-//		
-//		return response;
-//	}
+	
+	
+	@RequestMapping(value = "/user/orderHistory" , method = RequestMethod.GET)
+	public ModelAndView addOrder() {
+		ModelAndView response = new ModelAndView();
+		response.setViewName("orderHistory");
+		
+		User user = authenticationService.getCurrentUser();
+		response.addObject("user", user);
+		
+		log.info("This is in the GET method for create order");
+		return response;
+	
+}
 }

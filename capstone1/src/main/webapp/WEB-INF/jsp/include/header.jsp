@@ -48,7 +48,7 @@
 			  <a class="nav-link" href="user/account">ACCOUNT</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="/cart">CART</a>
+			  <a class="nav-link" href="../contact">CONTACT</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="/user/logout">LOGOUT</a>

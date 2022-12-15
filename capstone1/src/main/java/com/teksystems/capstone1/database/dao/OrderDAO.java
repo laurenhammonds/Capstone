@@ -15,7 +15,7 @@ public Order findById(Integer Id);
 	@Query(value = "select o from Order o where o.user.id = :userId")
 	public List<Order> findByUserId(Integer userId);
 	
-//	@Query(value="select * from order o join order_details od on o.id = od.order_id join user u on u.id = od.user_id where u.id = :userId", nativeQuery = true)
+//	@Query(value="select * from order o where u.id = :userId", nativeQuery = true)
 //	public List<Order> findOrderByUserId(Integer userId);
 	
 	@Query(value = "SELECT * FROM order WHERE product_id = :productId", nativeQuery = true)

@@ -36,7 +36,7 @@ public class Order {
 	private Integer id;
 		
 	@ManyToOne
-	@JoinColumn(name="id", insertable=false, updatable=false)
+	@JoinColumn(name="user_id", insertable=false, updatable=false)
 	@EqualsAndHashCode.Exclude
 	@ToString.Include
 	private User user;
