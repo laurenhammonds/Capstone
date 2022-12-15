@@ -19,7 +19,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="User_role")
+@Table(name="user_role")
 public class UserRole {
 	
 	@Id

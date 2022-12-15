@@ -22,7 +22,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	        	// this line of code specifies all URLs that do not need authentication to view
 	        	// this is the most important line to pay attention to.  If you want to make another URL
 	        	// open to the public then you have to come back here and add it.
-	        	.antMatchers("/pub/**", "/user/**", "/", "/index", "/search", "/home").permitAll()
+	        	.antMatchers("/pub/**", "/user/**", "/", "/index", "/search", "/home", "/products").permitAll()
 	        	// this line of code tells spring security that all URLs can only be accessed if the user
 	        	// is authenticated.   This is authentication only and does not care about authorization.
 	        	// authorization must be implement in the controller to limit by user role
@@ -42,14 +42,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	            // this URL is where spring security will send the user IF they have not requested a secure URL
 	            // if they have requested a secure URL spring security will ignore this and send them to the 
 	            // secured url they requested
-	            .defaultSuccessUrl("/homepage")
+	            .defaultSuccessUrl("/home", true)
 	            .and()
 	        .logout()
 	            .invalidateHttpSession(true)
 	            // this is the URL to log a user out
 	            .logoutUrl("/user/logout")
 	            // this is the URL to send the browser to after the user has logged out
-	            .logoutSuccessUrl("/");
+	            .logoutSuccessUrl("/home");
 		
 
 	}

@@ -6,5 +6,6 @@ import com.teksystems.capstone1.database.entity.User;
 
 public interface UserDAO extends JpaRepository<User, Long> {
 	
+	public User findById(Integer id);
 	public User findByEmail(String email);
 }

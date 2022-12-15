@@ -1,8 +1,9 @@
 <link rel="stylesheet" href="../../../pub/css/footer.css">
-
+<br>
+<br>
 <div class="footer">
-    <h2>WILD CARD CO.</h2>
-    <h3>@2022</h3>
+    <h5>WILD CARD CO.</h5>
+    <h5>@2022</h5>
   </div>
 </div>
   

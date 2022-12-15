@@ -1,0 +1,18 @@
+.order_history {
+    display: block;
+    height: 90px;
+    width: 80%;
+    margin-left: 150px;
+    border: solid;
+    background-color: #d0d0d0;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .nav-link {
+    color: #000;
+    text-decoration: none;
+  }
+  

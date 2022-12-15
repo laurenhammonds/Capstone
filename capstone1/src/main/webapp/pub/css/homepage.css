@@ -1,43 +1,73 @@
-/* .header {
+.background{
+  width: 100%;
+  height: 2000px;
+  background-color: #fff6fc;
+}
+
+.header {
   padding: 80px;
   text-align: center;
-  color: #0000;
+}
+
+.headerBackground {
+  background-image: url(../images/Background.jpg);
+  border: #fff6fc solid 10px;
+  border-radius: 10px;
+  border-radius: 10px;
+  background-size: cover;
+  overflow: hidden;
 }
 
 .header h1 {
   font-size: 40px;
 }
 
-
-
-.main {
-  flex: 100%;
-  padding: 20px;
-}
-
 .bg-image {
-  flex: 100%;
+  margin: auto;
   height:600px;
-  width: 100%;
+  width: 90%;
   background-size: 100%;
   background-size: cover;
 }
 
-.img1 { background-image: url("https://picsum.photos/id/40/367/267"); }
-.img2 { background-image: url("https://picsum.photos/id/147/367/267"); }
-.img3 { background-image: url("https://picsum.photos/id/517/367/267"); }
+.img1 { 
+  background-image: url("https://images.unsplash.com/photo-1540760938999-077b8231d890?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHJlY3RhbmdsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"); }
+.img2 { background-image: url("https://images.unsplash.com/photo-1540760938999-077b8231d890?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHJlY3RhbmdsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"); }
+.img3 { background-image: url("https://images.unsplash.com/photo-1540760938999-077b8231d890?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHJlY3RhbmdsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"); }
+.img4 { background-image: url("https://images.unsplash.com/photo-1540760938999-077b8231d890?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHJlY3RhbmdsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"); }
 
-
-
-Coment: responsive
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
+.img1 h1 {
+  color: #000000;
 }
+.img1 h2 {
+  float: right;
+}
+
+.img2 h1 {
+  color: #000000;
+}
+
+.img2 h2 {
+  float: right;
+}
+
+.img3 h1 {
+  color: #000000;
+}
+
+.img3 h2 {
+  float: right;
+}
+
+.img4 h1 {
+  float: right;
+  color: #000000;
+}
+
+
+/* responsive */
 @media screen and (max-width: 700px) {
   .row {
     flex-direction: column;
   }
-} */
+}

@@ -17,6 +17,7 @@ import com.teksystems.capstone1.database.dao.UserRoleDAO;
 import com.teksystems.capstone1.database.entity.User;
 import com.teksystems.capstone1.database.entity.UserRole;
 import com.teksystems.capstone1.form.CreateUserForm;
+import com.teksystems.capstone1.security.AuthenticatedUserService;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -34,8 +35,9 @@ public class LoginController {
 	@Qualifier("passwordEncoder")
 	private PasswordEncoder passwordEncoder;
 	
-	// this method is request mapping to show the actual login JSP page.
-	// the URL here in the mapping is the same URL configured in spring security .loginPage
+	@Autowired
+	private AuthenticatedUserService authenticationService;
+	
 	@RequestMapping(value = "/user/login", method = RequestMethod.GET)
 	public ModelAndView login() {
 		ModelAndView response = new ModelAndView();
@@ -92,7 +94,7 @@ public class LoginController {
 		ur.setUserId(user.getId());
 		
 		userRoleDao.save(ur);
-		response.setViewName("login_pages/login");
+//		response.setViewName("login_pages/login");
 		
 	} else {
 		response.addObject("bindingResult", bindingResult);

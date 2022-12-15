@@ -24,20 +24,36 @@
 			<span class="navbar-brand">WILD CARD</span>
 		  <!-- Links -->
 		  <ul class="navbar-nav">
-			<sec:authorize access="!isAuthenticated()">
+			
+			
 				<li class="nav-item">
 					<a class="nav-link" href="/home">HOME</a>
 				</li>
+				<sec:authorize access="!isAuthenticated()">
 				<li class="nav-item">
-					<a class="nav-link" href="#">PRODUCTS</a>
-				  </li>
+					<a class="nav-link" href="/login">LOGIN</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/create_user">SIGN UP</a>
+				</li>
 			</sec:authorize>
+				<sec:authorize access="isAuthenticated()">
+				<li class="nav-item">
+					<a class="nav-link" href="/search">SEARCH</a>
+				  </li>
+				<li class="nav-item">
+					<a class="nav-link" href="/products">PRODUCTS</a>
+				  </li>
 			<li class="nav-item">
-			  <a class="nav-link" href="#">ACCOUNT</a>
+			  <a class="nav-link" href="user/account">ACCOUNT</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="#">CART</a>
+			  <a class="nav-link" href="/cart">CART</a>
 			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/user/logout">LOGOUT</a>
+			  </li>
+		</sec:authorize>
 		  </ul>
 		</div>
 	  </nav>
@@ -45,7 +61,7 @@
 	  <br>
 	  <br>
 	  <br>
-
+	
 
 <!-- <div class="container">
 	<div class="row mt-1 mb-3 justify-content-center">

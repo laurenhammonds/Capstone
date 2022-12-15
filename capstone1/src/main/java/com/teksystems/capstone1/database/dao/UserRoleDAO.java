@@ -8,7 +8,6 @@ import com.teksystems.capstone1.database.entity.UserRole;
 
 public interface UserRoleDAO extends JpaRepository<UserRole, Long> {
 	
-	// this will return all records in the user_roles table for a userId
 		public List<UserRole> findByUserId(Integer userId);
 	
 }

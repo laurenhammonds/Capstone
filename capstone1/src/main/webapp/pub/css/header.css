@@ -20,7 +20,7 @@
   }
 
   .navbar-nav {
-    color: rgb(255, 151, 238);
+    color: #ff97ee;
     float: right;
     text-align: center;
     padding: 14px 20px;
@@ -53,6 +53,12 @@
     color: rgb(255, 151, 238); text-decoration: none; font-weight: none 
   }
 
+  @media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+  }
 /*   
 
   .background {

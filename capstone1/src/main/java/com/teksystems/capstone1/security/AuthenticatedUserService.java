@@ -58,9 +58,7 @@ public class AuthenticatedUserService {
 	}
 	
 	public User getCurrentUser() {
-		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-		HttpSession session = attr.getRequest().getSession(true); // true == allow create
-		User user = (User) session.getAttribute("User");
+		User user = userDao.findByEmail(getCurrentUsername());
 		return user;
 	}
 

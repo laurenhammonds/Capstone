@@ -13,6 +13,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -24,7 +25,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="User")
+@Table(name="user")
 public class User {
 
 	@Id
@@ -59,8 +60,9 @@ public class User {
 	@Column(name="zip")
 	private String zip;
 	
-//	@OneToMany(mappedBy = "order", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-//	private List<Order> order;
+	@OneToMany(mappedBy = "user")
+	@ToString.Exclude
+	private List<Order> orders;
 
 
 }
