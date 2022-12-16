@@ -6,7 +6,7 @@ For my case study, I created a website for users to purchase handmade items! The
 - Frontend uses HTML, CSS,  and JSP
 - Other tools used: Eclipse, MySQL Workbench, VSCode, Spring Boot
 
-![ER Diagram]()
+![ER Diagram](/laurenhammonds/Desktop//Users/laurenhammonds/Desktop/CaseStudyERdiagram.png")
 
 In the future, I'd like to get my cart up and starting to process orders. I also plan on improving the frontend to improve the user's experience.
 
